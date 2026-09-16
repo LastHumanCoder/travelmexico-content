@@ -11,3 +11,8 @@ Client round-one feedback applied to all 21 pieces: CTA target is now https://tr
 ## Revision 3 (September 15, 2026)
 
 CTA buttons link to https://www.moretravel4less.com/ again (target=_blank, rel=noopener), each followed by the disclaimer "Searches and bookings are done through MoreTravel4Less. Opens in a new tab." The byline names the partner. Same 21 pieces pushed to the StoreBox CMS (tenant 1093c4f1) as drafts via `TravelMexico_PSEO/publish.py`.
+
+
+## Revision 4 (September 16, 2026)
+
+The hero-band title is an `h1` in all 21 blocks (was `h2`). Verified against a live StoreBox `custom_page`: the theme renders the title field only in listings, not as a page heading, so the pages had no H1 and the document's only H1 was the theme's footer contact block. Blogs already get an H1 from the theme (their hero is stripped at publish); the change gives the standalone blocks one too. CSS updated so the H1 renders exactly as before. Script: `TravelMexico_PSEO/_h1_fix.py`.
